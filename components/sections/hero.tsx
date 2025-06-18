@@ -1,71 +1,32 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import { Icons } from "../ui/icons";
+import { socialIcons } from "@/data";
 
 const Hero = () => {
   return (
-    <section className="container mx-auto max-w-6xl grid grid-cols-2 justify-between gap-x-46 pt-18 items-center">
-      <div>
-        <h1 className="text-6xl pb-5 font-bold">
-          Transform Your <br /> Business Today
-        </h1>
-        <p className="pb-5">
-          Sed turpis massa, gravida a diam quis, tristique ultrices massa.
-          Curabitur velit neque, interdum.
-        </p>
+    <section className="container mx-auto max-w-6xl text-center pt-18 pb-10">
+      <Image
+        src={"/images/avatar.png"}
+        width={107}
+        height={107}
+        alt="avatar"
+        className="mx-auto"
+      />
+      <h1 className="text-2xl font-semibold mt-2.5 mb-1.5">Jeremy Stanton</h1>
+      <p>Full-Stack Engineer and a Content Creator.</p>
 
-        <div className="flex gap-4 pb-16">
-          <Button className="" size={"lg"}>
-            Explore Services <Icons.arrowRight />
-          </Button>
-          <Button className="" size={"lg"} variant={"outline"}>
-            Book a Call <Icons.callOutline />
-          </Button>
-        </div>
+      <Button size={"lg"} className="mt-8">
+        Available For Work.
+      </Button>
 
-        <div>
-          <p>Trusted by thousands of people around the world</p>
-          <div className="flex pt-4">
-            <img src="/images/avatars/Ellipse-1.png" alt="" />
-            <img src="/images/avatars/Ellipse-2.png" alt="" className="-ml-4" />
-            <img src="/images/avatars/Ellipse-3.png" alt="" className="-ml-4" />
-            <img src="/images/avatars/Ellipse-4.png" alt="" className="-ml-4" />
-            <img src="/images/avatars/Ellipse-5.png" alt="" className="-ml-4" />
-            <img src="/images/avatars/Ellipse-6.png" alt="" className="-ml-4" />
+      <div className="flex justify-center items-center gap-5 mt-6">
+        {socialIcons.map((item, i) => (
+          <div key={i} className="flex items-center gap-2">
+            <span>{item.icon}</span>{" "}
+            <span className="capitalize">{item.name}</span>
           </div>
-        </div>
-      </div>
-
-      <div className="flex gap-4">
-        <div className="flex flex-col gap-4">
-          <Image
-            src={"/images/hero-img/hero-1.png"}
-            width={232}
-            height={255}
-            alt="hero img 1"
-          />
-          <Image
-            src={"/images/hero-img/hero-2.png"}
-            width={232}
-            height={255}
-            alt="hero img 1"
-          />
-        </div>
-        <div className="flex flex-col gap-4 pt-6">
-          <Image
-            src={"/images/hero-img/hero-4.png"}
-            width={232}
-            height={255}
-            alt="hero img 1"
-          />
-          <Image
-            src={"/images/hero-img/hero-5.png"}
-            width={232}
-            height={255}
-            alt="hero img 1"
-          />
-        </div>
+        ))}
       </div>
     </section>
   );

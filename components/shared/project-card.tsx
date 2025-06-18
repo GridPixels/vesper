@@ -1,12 +1,12 @@
-import BlogType from "@/types/BlogItem";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const BlogCard = ({ blog }: { blog: BlogType }) => {
+const ProjectCard = ({ data }) => {
   return (
     <div className="text-accent-foreground bg-gray-100 mt-5 p-5">
       <div className="flex justify-between">
-        <span>{blog.publishedSite}</span>
+        <Image src={data.img} width={20} height={20} alt={""} />
         <Link href={"#"}>
           <svg
             width="18"
@@ -26,11 +26,11 @@ const BlogCard = ({ blog }: { blog: BlogType }) => {
         </Link>
       </div>
       <h3 className="pb-3 text-xl font-medium hover:text-primary transition duration-200">
-        <Link href={`/blog/${blog.link}`}>{blog.title}</Link>
+        <Link href={`/blog/${data.link}`}>{data.title}</Link>
       </h3>
-      <p>{blog.excerpt}</p>
+      <p>{data.excerpt}</p>
     </div>
   );
 };
 
-export default BlogCard;
+export default ProjectCard;

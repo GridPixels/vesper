@@ -1,57 +1,8 @@
 import BlogType from "@/types/BlogItem";
-import BrandItemType from "@/types/BrandItem";
-import NavMenuType from "@/types/NavMenu";
-import PricingItemType from "@/types/PriceItem";
-import ServiceItemType from "@/types/ServiceItem";
+import ExperienceItemType from "@/types/ExperienceItem";
 import SocialIconType from "@/types/SocialIcon";
-import TeamItemType from "@/types/TeamItem";
-import TestimonialItemType from "@/types/TestimonialItem";
-import WhyUsItemType from "@/types/WhyUSItem";
-
-const menuData: NavMenuType[] = [
-  {
-    name: "Services",
-    href: "/#services",
-  },
-  {
-    name: "Portfolio",
-    href: "/#projects",
-  },
-  {
-    name: "Resources",
-    href: "",
-    submenu: [
-      {
-        name: "Blog",
-        href: "/blog",
-      },
-      {
-        name: "Single Blog",
-        href: "/blog/single-blog",
-      },
-    ],
-  },
-];
 
 const socialIcons: SocialIconType[] = [
-  {
-    icon: (
-      <svg
-        width="22"
-        height="22"
-        viewBox="0 0 22 22"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M21.4618 10.7564C21.4618 4.94242 16.7777 0.229492 11.0003 0.229492C5.22029 0.2308 0.536133 4.94242 0.536133 10.7577C0.536133 16.0107 4.36244 20.3653 9.36306 21.1552V13.7994H6.70844V10.7577H9.36567V8.43657C9.36567 5.79895 10.9284 4.34218 13.3175 4.34218C14.4631 4.34218 15.6596 4.54749 15.6596 4.54749V7.13672H14.3401C13.0416 7.13672 12.6362 7.9488 12.6362 8.7818V10.7564H15.5367L15.0737 13.7981H12.6349V21.1539C17.6355 20.364 21.4618 16.0094 21.4618 10.7564Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
-    name: "facebook",
-    link: "#",
-  },
   {
     icon: (
       <svg
@@ -67,7 +18,25 @@ const socialIcons: SocialIconType[] = [
         />
       </svg>
     ),
-    name: "twitter or x",
+    name: "x/twitter",
+    link: "#",
+  },
+  {
+    icon: (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C12.1384 15.0543 13.5187 14.0337 14.4964 12.672C15.4741 11.3104 16 9.67631 16 8C16 3.58 12.42 0 8 0Z"
+          fill="black"
+        />
+      </svg>
+    ),
+    name: "github",
     link: "#",
   },
   {
@@ -85,7 +54,7 @@ const socialIcons: SocialIconType[] = [
         />
       </svg>
     ),
-    name: "instagram",
+    name: "YouTube",
     link: "#",
   },
   {
@@ -103,477 +72,102 @@ const socialIcons: SocialIconType[] = [
         />
       </svg>
     ),
-    name: "youtube",
+    name: "Instagram",
     link: "#",
-  },
-];
-
-const brandsData: BrandItemType[] = [
-  {
-    name: "Amara",
-    img: "/images/brands/amara-black.svg",
-    width: 169,
-  },
-  {
-    name: "Asgardia",
-    img: "/images/brands/asgardia-black.svg",
-    width: 199,
-  },
-  {
-    name: "Atica",
-    img: "/images/brands/atica-black.svg",
-    width: 112,
-  },
-  {
-    name: "Aven",
-    img: "/images/brands/aven-black.svg",
-    width: 156,
-  },
-  {
-    name: "Circle",
-    img: "/images/brands/circle-black.svg",
-    width: 159,
-  },
-];
-
-const whyUSData: WhyUsItemType[] = [
-  {
-    icon: (
-      <svg
-        width="22"
-        height="20"
-        viewBox="0 0 22 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M8.75 1.10402V6.81802C8.75 7.1135 8.69181 7.40608 8.57874 7.67906C8.46567 7.95205 8.29993 8.20009 8.091 8.40902L4 12.5M8.75 1.10402C8.499 1.12702 8.249 1.15402 8 1.18602M8.75 1.10402C10.2468 0.964838 11.7532 0.964838 13.25 1.10402M4 12.5L4.77 12.307C6.863 11.7898 9.07182 12.0355 11 13C12.9282 13.9645 15.137 14.2102 17.23 13.693L18.8 13.3M4 12.5L1.798 14.703C0.565003 15.934 1.147 18.02 2.865 18.313C5.509 18.765 8.227 19 11 19C13.7262 19.001 16.4476 18.7711 19.135 18.313C20.852 18.02 21.434 15.934 20.202 14.702L18.8 13.3M13.25 1.10402V6.81802C13.25 7.41502 13.487 7.98802 13.909 8.40902L18.8 13.3M13.25 1.10402C13.501 1.12702 13.751 1.15402 14 1.18602"
-          stroke="#8280FF"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
-    title: "Expert-Led Solutions",
-    desc: "Our team of seasoned professionals brings deep industry knowledge to every project, ensuring strategic and high-quality outcomes.",
-  },
-  {
-    icon: (
-      <svg
-        width="22"
-        height="20"
-        viewBox="0 0 22 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M8.75 1.10402V6.81802C8.75 7.1135 8.69181 7.40608 8.57874 7.67906C8.46567 7.95205 8.29993 8.20009 8.091 8.40902L4 12.5M8.75 1.10402C8.499 1.12702 8.249 1.15402 8 1.18602M8.75 1.10402C10.2468 0.964838 11.7532 0.964838 13.25 1.10402M4 12.5L4.77 12.307C6.863 11.7898 9.07182 12.0355 11 13C12.9282 13.9645 15.137 14.2102 17.23 13.693L18.8 13.3M4 12.5L1.798 14.703C0.565003 15.934 1.147 18.02 2.865 18.313C5.509 18.765 8.227 19 11 19C13.7262 19.001 16.4476 18.7711 19.135 18.313C20.852 18.02 21.434 15.934 20.202 14.702L18.8 13.3M13.25 1.10402V6.81802C13.25 7.41502 13.487 7.98802 13.909 8.40902L18.8 13.3M13.25 1.10402C13.501 1.12702 13.751 1.15402 14 1.18602"
-          stroke="#8280FF"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
-    title: "Fast & Reliable Delivery",
-    desc: "We value your time. That’s why we focus on streamlined processes and consistent communication to deliver on time — every time.",
-  },
-  {
-    icon: (
-      <svg
-        width="22"
-        height="20"
-        viewBox="0 0 22 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M8.75 1.10402V6.81802C8.75 7.1135 8.69181 7.40608 8.57874 7.67906C8.46567 7.95205 8.29993 8.20009 8.091 8.40902L4 12.5M8.75 1.10402C8.499 1.12702 8.249 1.15402 8 1.18602M8.75 1.10402C10.2468 0.964838 11.7532 0.964838 13.25 1.10402M4 12.5L4.77 12.307C6.863 11.7898 9.07182 12.0355 11 13C12.9282 13.9645 15.137 14.2102 17.23 13.693L18.8 13.3M4 12.5L1.798 14.703C0.565003 15.934 1.147 18.02 2.865 18.313C5.509 18.765 8.227 19 11 19C13.7262 19.001 16.4476 18.7711 19.135 18.313C20.852 18.02 21.434 15.934 20.202 14.702L18.8 13.3M13.25 1.10402V6.81802C13.25 7.41502 13.487 7.98802 13.909 8.40902L18.8 13.3M13.25 1.10402C13.501 1.12702 13.751 1.15402 14 1.18602"
-          stroke="#8280FF"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
-    title: "Customer-First Approach",
-    desc: "Your success is our priority. We listen, adapt, and work closely with you to create tailored solutions that truly meet your needs.",
-  },
-];
-
-const servicesData: ServiceItemType[] = [
-  {
-    icon: (
-      <svg
-        width="36"
-        height="36"
-        viewBox="0 0 36 36"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="36" height="36" fill="white" />
-        <path
-          d="M14.6249 4.65609V13.2271C14.6249 13.6703 14.5377 14.1092 14.368 14.5187C14.1984 14.9281 13.9498 15.3002 13.6364 15.6136L7.49994 21.7501M14.6249 4.65609C14.2484 4.69059 13.8734 4.73109 13.4999 4.77909M14.6249 4.65609C16.8701 4.44732 19.1298 4.44732 21.3749 4.65609M7.49994 21.7501L8.65494 21.4606C11.7944 20.6848 15.1077 21.0533 17.9999 22.5001C20.8922 23.9468 24.2054 24.3154 27.3449 23.5396L29.6999 22.9501M7.49994 21.7501L4.19694 25.0546C2.34744 26.9011 3.22044 30.0301 5.79744 30.4696C9.76344 31.1476 13.8404 31.5001 17.9999 31.5001C22.0892 31.5015 26.1713 31.1568 30.2024 30.4696C32.7779 30.0301 33.6509 26.9011 31.8029 25.0531L29.6999 22.9501M21.3749 4.65609V13.2271C21.3749 14.1226 21.7304 14.9821 22.3634 15.6136L29.6999 22.9501M21.3749 4.65609C21.7514 4.69059 22.1264 4.73109 22.4999 4.77909"
-          stroke="#434343"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
-    title: "Web Design",
-    description:
-      "Beautiful, responsive designs that engage your audience and drive conversions.",
-    link: "/services/web-design",
-  },
-  {
-    icon: (
-      <svg
-        width="36"
-        height="36"
-        viewBox="0 0 36 36"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="36" height="36" fill="white" />
-        <path
-          d="M14.6249 4.65609V13.2271C14.6249 13.6703 14.5377 14.1092 14.368 14.5187C14.1984 14.9281 13.9498 15.3002 13.6364 15.6136L7.49994 21.7501M14.6249 4.65609C14.2484 4.69059 13.8734 4.73109 13.4999 4.77909M14.6249 4.65609C16.8701 4.44732 19.1298 4.44732 21.3749 4.65609M7.49994 21.7501L8.65494 21.4606C11.7944 20.6848 15.1077 21.0533 17.9999 22.5001C20.8922 23.9468 24.2054 24.3154 27.3449 23.5396L29.6999 22.9501M7.49994 21.7501L4.19694 25.0546C2.34744 26.9011 3.22044 30.0301 5.79744 30.4696C9.76344 31.1476 13.8404 31.5001 17.9999 31.5001C22.0892 31.5015 26.1713 31.1568 30.2024 30.4696C32.7779 30.0301 33.6509 26.9011 31.8029 25.0531L29.6999 22.9501M21.3749 4.65609V13.2271C21.3749 14.1226 21.7304 14.9821 22.3634 15.6136L29.6999 22.9501M21.3749 4.65609C21.7514 4.69059 22.1264 4.73109 22.4999 4.77909"
-          stroke="#434343"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
-    title: "Web Development",
-    description:
-      "Robust, scalable websites built with modern technologies tailored to your goals.",
-    link: "/services/web-development",
-  },
-  {
-    icon: (
-      <svg
-        width="36"
-        height="36"
-        viewBox="0 0 36 36"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="36" height="36" fill="white" />
-        <path
-          d="M14.6249 4.65609V13.2271C14.6249 13.6703 14.5377 14.1092 14.368 14.5187C14.1984 14.9281 13.9498 15.3002 13.6364 15.6136L7.49994 21.7501M14.6249 4.65609C14.2484 4.69059 13.8734 4.73109 13.4999 4.77909M14.6249 4.65609C16.8701 4.44732 19.1298 4.44732 21.3749 4.65609M7.49994 21.7501L8.65494 21.4606C11.7944 20.6848 15.1077 21.0533 17.9999 22.5001C20.8922 23.9468 24.2054 24.3154 27.3449 23.5396L29.6999 22.9501M7.49994 21.7501L4.19694 25.0546C2.34744 26.9011 3.22044 30.0301 5.79744 30.4696C9.76344 31.1476 13.8404 31.5001 17.9999 31.5001C22.0892 31.5015 26.1713 31.1568 30.2024 30.4696C32.7779 30.0301 33.6509 26.9011 31.8029 25.0531L29.6999 22.9501M21.3749 4.65609V13.2271C21.3749 14.1226 21.7304 14.9821 22.3634 15.6136L29.6999 22.9501M21.3749 4.65609C21.7514 4.69059 22.1264 4.73109 22.4999 4.77909"
-          stroke="#434343"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
-    title: "UI/UX Design",
-    description:
-      "User-focused design experiences that are intuitive, functional, and visually stunning.",
-    link: "/services/ui-ux-design",
-  },
-  {
-    icon: (
-      <svg
-        width="36"
-        height="36"
-        viewBox="0 0 36 36"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="36" height="36" fill="white" />
-        <path
-          d="M14.6249 4.65609V13.2271C14.6249 13.6703 14.5377 14.1092 14.368 14.5187C14.1984 14.9281 13.9498 15.3002 13.6364 15.6136L7.49994 21.7501M14.6249 4.65609C14.2484 4.69059 13.8734 4.73109 13.4999 4.77909M14.6249 4.65609C16.8701 4.44732 19.1298 4.44732 21.3749 4.65609M7.49994 21.7501L8.65494 21.4606C11.7944 20.6848 15.1077 21.0533 17.9999 22.5001C20.8922 23.9468 24.2054 24.3154 27.3449 23.5396L29.6999 22.9501M7.49994 21.7501L4.19694 25.0546C2.34744 26.9011 3.22044 30.0301 5.79744 30.4696C9.76344 31.1476 13.8404 31.5001 17.9999 31.5001C22.0892 31.5015 26.1713 31.1568 30.2024 30.4696C32.7779 30.0301 33.6509 26.9011 31.8029 25.0531L29.6999 22.9501M21.3749 4.65609V13.2271C21.3749 14.1226 21.7304 14.9821 22.3634 15.6136L29.6999 22.9501M21.3749 4.65609C21.7514 4.69059 22.1264 4.73109 22.4999 4.77909"
-          stroke="#434343"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
-    title: "E-Commerce Solutions",
-    description:
-      "Launch and scale your online store with custom, conversion-optimized solutions.",
-    link: "/services/ecommerce",
-  },
-  {
-    icon: (
-      <svg
-        width="36"
-        height="36"
-        viewBox="0 0 36 36"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="36" height="36" fill="white" />
-        <path
-          d="M14.6249 4.65609V13.2271C14.6249 13.6703 14.5377 14.1092 14.368 14.5187C14.1984 14.9281 13.9498 15.3002 13.6364 15.6136L7.49994 21.7501M14.6249 4.65609C14.2484 4.69059 13.8734 4.73109 13.4999 4.77909M14.6249 4.65609C16.8701 4.44732 19.1298 4.44732 21.3749 4.65609M7.49994 21.7501L8.65494 21.4606C11.7944 20.6848 15.1077 21.0533 17.9999 22.5001C20.8922 23.9468 24.2054 24.3154 27.3449 23.5396L29.6999 22.9501M7.49994 21.7501L4.19694 25.0546C2.34744 26.9011 3.22044 30.0301 5.79744 30.4696C9.76344 31.1476 13.8404 31.5001 17.9999 31.5001C22.0892 31.5015 26.1713 31.1568 30.2024 30.4696C32.7779 30.0301 33.6509 26.9011 31.8029 25.0531L29.6999 22.9501M21.3749 4.65609V13.2271C21.3749 14.1226 21.7304 14.9821 22.3634 15.6136L29.6999 22.9501M21.3749 4.65609C21.7514 4.69059 22.1264 4.73109 22.4999 4.77909"
-          stroke="#434343"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
-    title: "SEO & Marketing",
-    description:
-      "Boost your online visibility and drive traffic with proven SEO and digital strategies.",
-    link: "/services/seo-marketing",
-  },
-  {
-    icon: (
-      <svg
-        width="36"
-        height="36"
-        viewBox="0 0 36 36"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="36" height="36" fill="white" />
-        <path
-          d="M14.6249 4.65609V13.2271C14.6249 13.6703 14.5377 14.1092 14.368 14.5187C14.1984 14.9281 13.9498 15.3002 13.6364 15.6136L7.49994 21.7501M14.6249 4.65609C14.2484 4.69059 13.8734 4.73109 13.4999 4.77909M14.6249 4.65609C16.8701 4.44732 19.1298 4.44732 21.3749 4.65609M7.49994 21.7501L8.65494 21.4606C11.7944 20.6848 15.1077 21.0533 17.9999 22.5001C20.8922 23.9468 24.2054 24.3154 27.3449 23.5396L29.6999 22.9501M7.49994 21.7501L4.19694 25.0546C2.34744 26.9011 3.22044 30.0301 5.79744 30.4696C9.76344 31.1476 13.8404 31.5001 17.9999 31.5001C22.0892 31.5015 26.1713 31.1568 30.2024 30.4696C32.7779 30.0301 33.6509 26.9011 31.8029 25.0531L29.6999 22.9501M21.3749 4.65609V13.2271C21.3749 14.1226 21.7304 14.9821 22.3634 15.6136L29.6999 22.9501M21.3749 4.65609C21.7514 4.69059 22.1264 4.73109 22.4999 4.77909"
-          stroke="#434343"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
-    title: "Maintenance & Support",
-    description:
-      "Ongoing support and updates to keep your site secure, fast, and up-to-date.",
-    link: "/services/maintenance-support",
-  },
-];
-
-const teamsData: TeamItemType[] = [
-  {
-    img: "/images/team/team-1.png",
-    name: "Amira Khan",
-    role: "Lead Designer",
-  },
-  {
-    img: "/images/team/team-2.png",
-    name: "Ravi Mehta",
-    role: "Frontend Developer",
-  },
-  {
-    img: "/images/team/team-3.png",
-    name: "Sophia Lee",
-    role: "UI/UX Designer",
-  },
-  {
-    img: "/images/team/team-4.png",
-    name: "Junaid Rahman",
-    role: "Backend Developer",
-  },
-  {
-    img: "/images/team/team-5.png",
-    name: "Isabella Brown",
-    role: "Project Manager",
-  },
-  {
-    img: "/images/team/team-6.png",
-    name: "Mohammed Zayed",
-    role: "Full Stack Developer",
-  },
-  {
-    img: "/images/team/team-7.png",
-    name: "Lina D’Souza",
-    role: "Graphic Designer",
-  },
-  {
-    img: "/images/team/team-8.png",
-    name: "Ethan Patel",
-    role: "DevOps Engineer",
-  },
-];
-
-const pricingData: PricingItemType[] = [
-  {
-    title: "Basic",
-    description:
-      "Randomised words which don't look even slightly believable. If you are  going.",
-    price: 0,
-    frequency: "",
-    features: [
-      "Discovered the undoubtable source",
-      "Discovered the undoubtable source",
-      "Discovered the undoubtable source",
-      "Discovered the undoubtable source",
-    ],
-    ctaText: "Get Started",
-    popular: false,
-    id: 1,
-    url: "/#stripe-link",
-  },
-  {
-    title: "Basic",
-    description:
-      "Randomised words which don't look even slightly believable. If you are  going.",
-    price: 0,
-    frequency: "",
-    features: [
-      "Discovered the undoubtable source",
-      "Discovered the undoubtable source",
-      "Discovered the undoubtable source",
-      "Discovered the undoubtable source",
-    ],
-    ctaText: "Get Started",
-    popular: false,
-    id: 1,
-    url: "/#stripe-link",
-  },
-  {
-    title: "Basic",
-    description:
-      "Randomised words which don't look even slightly believable. If you are  going.",
-    price: 0,
-    frequency: "",
-    features: [
-      "Discovered the undoubtable source",
-      "Discovered the undoubtable source",
-      "Discovered the undoubtable source",
-      "Discovered the undoubtable source",
-    ],
-    ctaText: "Get Started",
-    popular: false,
-    id: 1,
-    url: "/#stripe-link",
-  },
-];
-
-const testimonilsData: TestimonialItemType[] = [
-  {
-    img: "/images/testimonial/user-1.png",
-    name: "Cody Fisher",
-    role: "Security Expert at Google.",
-    review:
-      "Sed a arcu feugiat, euismod quam vel, rhoncus nibh. Aliquam ac risus a  libero vehicula iaculis. Etiam ac tortor, malesuada quam nec",
-  },
-  {
-    img: "/images/testimonial/user-1.png",
-    name: "Cody Fisher",
-    role: "Security Expert at Google.",
-    review:
-      "Sed a arcu feugiat, euismod quam vel, rhoncus nibh. Aliquam ac risus a  libero vehicula iaculis. Etiam ac tortor, malesuada quam nec",
-  },
-  {
-    img: "/images/testimonial/user-1.png",
-    name: "Cody Fisher",
-    role: "Security Expert at Google.",
-    review:
-      "Sed a arcu feugiat, euismod quam vel, rhoncus nibh. Aliquam ac risus a  libero vehicula iaculis. Etiam ac tortor, malesuada quam nec",
-  },
-  {
-    img: "/images/testimonial/user-1.png",
-    name: "Cody Fisher",
-    role: "Security Expert at Google.",
-    review:
-      "Sed a arcu feugiat, euismod quam vel, rhoncus nibh. Aliquam ac risus a  libero vehicula iaculis. Etiam ac tortor, malesuada quam nec",
-  },
-  {
-    img: "/images/testimonial/user-1.png",
-    name: "Cody Fisher",
-    role: "Security Expert at Google.",
-    review:
-      "Sed a arcu feugiat, euismod quam vel, rhoncus nibh. Aliquam ac risus a  libero vehicula iaculis. Etiam ac tortor, malesuada quam nec",
-  },
-  {
-    img: "/images/testimonial/user-1.png",
-    name: "Cody Fisher",
-    role: "Security Expert at Google.",
-    review:
-      "Sed a arcu feugiat, euismod quam vel, rhoncus nibh. Aliquam ac risus a  libero vehicula iaculis. Etiam ac tortor, malesuada quam nec",
   },
 ];
 
 const blogsData: BlogType[] = [
   {
     img: "/images/blog/img-1.png",
-    tag: "AI & Robotics",
+    publishedSite: "Wired.com",
     author: "Ella Beily",
     publishDate: "Jun 05 2025",
-    title: "Differences between Robotics and Artificial Intelligence",
-    link: "single-blog",
+    title: "Why PHP is Gaining Popularity in 2024",
+    excerpt:
+      "Duis finibus nibh consequat magna suscipit, ut tristique purus  fermentum. Aliquam sed dui est. Curabitur eu tincidunt diam.  Pellentesque tristique, mauris a egestas dapibus, nunc odio faucibus  urna, sed luctus arcu lacus eu ante.",
+    link: "Wired.com",
   },
   {
-    img: "/images/blog/img-2.png",
-    tag: "Machine Learning",
-    author: "Liam Rhodes",
-    publishDate: "May 28 2025",
-    title: "How Machine Learning is Changing Modern Industries",
-    link: "single-blog",
+    img: "/images/blog/img-1.png",
+    publishedSite: "dev.to",
+    author: "Ella Beily",
+    publishDate: "Jun 05 2025",
+    title: "Chat with your PDF using Pinata,OpenAI and Streamlit ",
+    excerpt:
+      "Duis finibus nibh consequat magna suscipit, ut tristique purus  fermentum. Aliquam sed dui est. Curabitur eu tincidunt diam.  Pellentesque tristique, mauris a egestas dapibus, nunc odio faucibus  urna, sed luctus arcu lacus eu ante.",
+    link: "Wired.com",
   },
   {
-    img: "/images/blog/img-3.png",
-    tag: "Technology",
-    author: "Sophia Lin",
-    publishDate: "May 18 2025",
-    title: "Top 10 Emerging Technologies to Watch in 2025",
-    link: "single-blog",
+    img: "/images/blog/img-1.png",
+    publishedSite: "TechCrunch.com",
+    author: "Ella Beily",
+    publishDate: "Jun 05 2025",
+    title: "Mastering Docker and Kubernetes: A Beginner's Guide",
+    excerpt:
+      "Duis finibus nibh consequat magna suscipit, ut tristique purus  fermentum. Aliquam sed dui est. Curabitur eu tincidunt diam.  Pellentesque tristique, mauris a egestas dapibus, nunc odio faucibus  urna, sed luctus arcu lacus eu ante.",
+    link: "Wired.com",
   },
   {
-    img: "/images/blog/img-4.png",
-    tag: "AI & Robotics",
-    author: "Daniel Carter",
-    publishDate: "May 12 2025",
-    title: "The Future of Robotics in Everyday Life",
-    link: "single-blog",
+    img: "/images/blog/img-1.png",
+    publishedSite: "Recode.com",
+    author: "Ella Beily",
+    publishDate: "Jun 05 2025",
+    title: "Postman vs Apidog: Choosing the Suitable API Development Tool ",
+    excerpt:
+      "Duis finibus nibh consequat magna suscipit, ut tristique purus  fermentum. Aliquam sed dui est. Curabitur eu tincidunt diam.  Pellentesque tristique, mauris a egestas dapibus, nunc odio faucibus  urna, sed luctus arcu lacus eu ante.",
+    link: "Wired.com",
   },
-  {
-    img: "/images/blog/img-5.png",
-    tag: "Innovation",
-    author: "Grace Kim",
-    publishDate: "May 02 2025",
-    title: "Why Innovation is the Core of Tech Startups",
-    link: "single-blog",
-  },
-  {
-    img: "/images/blog/img-6.png",
-    tag: "AI & Robotics",
-    author: "Noah Patel",
-    publishDate: "Apr 25 2025",
-    title: "Can Robots Learn Like Humans? A Deep Dive",
-    link: "single-blog",
-  },
-  // {
-  //   img: "/images/blog/img-7.png",
-  //   tag: "Cloud Computing",
-  //   author: "Ava Morgan",
-  //   publishDate: "Apr 17 2025",
-  //   title: "How Cloud Technology is Powering AI Solutions",
-  //   link: "/single-blog",
-  // },
-  // {
-  //   img: "/images/blog/img-8.png",
-  //   tag: "Cybersecurity",
-  //   author: "Ethan Lee",
-  //   publishDate: "Apr 10 2025",
-  //   title: "AI vs Hackers: How Artificial Intelligence is Defending Data",
-  //   link: "/single-blog",
-  // },
-  // {
-  //   img: "/images/blog/img-9.png",
-  //   tag: "Data Science",
-  //   author: "Isla Thompson",
-  //   publishDate: "Apr 02 2025",
-  //   title: "Data Science in AI: From Raw Data to Real Decisions",
-  //   link: "/single-blog",
-  // },
 ];
 
-export {
-  menuData,
-  socialIcons,
-  brandsData,
-  whyUSData,
-  servicesData,
-  teamsData,
-  pricingData,
-  testimonilsData,
-  blogsData,
-};
+const experienceData: ExperienceItemType[] = [
+  {
+    logo: "/images/brands/brand-1.png",
+    duration: "2022 - Today",
+    title: "Full-Stack Engineer and Devereal",
+    companyName: "Atica inc.",
+    description:
+      "Duis finibus nibh consequat magna suscipit, ut tristique purus  fermentum. Aliquam sed dui est. Curabitur eu tincidunt diam.  Pellentesque tristique, mauris a egestas dapibus, nunc odio faucibus  urna, sed luctus arcu lacus eu ante.",
+  },
+  {
+    logo: "/images/brands/brand-2.png",
+    duration: "2019 - 2022",
+    title: "Devops Lead and a Backend Developer",
+    companyName: "Velocity Studios",
+    description:
+      "Duis finibus nibh consequat magna suscipit, ut tristique purus  fermentum. Aliquam sed dui est. Curabitur eu tincidunt diam.  Pellentesque tristique, mauris a egestas dapibus, nunc odio faucibus  urna, sed luctus arcu lacus eu ante.",
+  },
+  {
+    logo: "/images/brands/brand-3.png",
+    duration: "2017 - 2019",
+    title: "Full-Stack Engineer and Devereal",
+    companyName: "Atica inc.",
+    description:
+      "Duis finibus nibh consequat magna suscipit, ut tristique purus  fermentum. Aliquam sed dui est. Curabitur eu tincidunt diam.  Pellentesque tristique, mauris a egestas dapibus, nunc odio faucibus  urna, sed luctus arcu lacus eu ante.",
+  },
+];
+
+const projectsData: BlogType[] = [
+  {
+    img: "/images/brands/project-1.png",
+    publishedSite: "Wired.com",
+    author: "Ella Beily",
+    publishDate: "Jun 05 2025",
+    title: "Why PHP is Gaining Popularity in 2024",
+    excerpt:
+      "Duis finibus nibh consequat magna suscipit, ut tristique purus  fermentum. Aliquam sed dui est. Curabitur eu tincidunt diam.  Pellentesque tristique, mauris a egestas dapibus, nunc odio faucibus  urna, sed luctus arcu lacus eu ante.",
+    link: "Wired.com",
+  },
+  {
+    img: "/images/brands/project-2.png",
+    publishedSite: "dev.to",
+    author: "Ella Beily",
+    publishDate: "Jun 05 2025",
+    title: "Chat with your PDF using Pinata,OpenAI and Streamlit ",
+    excerpt:
+      "Duis finibus nibh consequat magna suscipit, ut tristique purus  fermentum. Aliquam sed dui est. Curabitur eu tincidunt diam.  Pellentesque tristique, mauris a egestas dapibus, nunc odio faucibus  urna, sed luctus arcu lacus eu ante.",
+    link: "Wired.com",
+  },
+];
+
+export { socialIcons, blogsData, experienceData, projectsData };
