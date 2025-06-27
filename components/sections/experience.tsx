@@ -4,7 +4,7 @@ import ExperienceCard from "../shared/experience-card";
 
 const Experience = () => {
   return (
-    <section className="pb-10">
+    <section className="pb-16">
       <h2 className="text-lg font-semibold">Experience</h2>
 
       {experienceData.map((item, i) => (
