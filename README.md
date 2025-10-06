@@ -1,8 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vesper – Free Next.js Portfolio Template
 
-## Getting Started
+Minimalist Next.js Portfolio template. Clean, elegant, and perfect for professionals who want a simple online presence.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+* ⚡ Built with Next.js 15 App Router
+* 🎨 Clean and modern UI using Tailwind CSS
+* 📱 Mobile-friendly responsive layout
+* 🧱 Modular and reusable components
+* 🧑‍💻 SEO-optimized and fast-loading
+* 📁 Developer-friendly folder structure
+
+---
+
+## 📦 Tech Stack
+
+* [Next.js](https://nextjs.org)
+* [Tailwind CSS](https://tailwindcss.com)
+* [TypeScript](https://www.typescriptlang.org)
+* [Shadcn/ui](https://ui.shadcn.com/)
+* [Vercel](https://vercel.com) for deployment
+
+---
+
+## 🚀 Getting Started
+
+Clone this repo and install dependencies:
+
+```bash
+cd nexify
+
+# install dependencies
+npm install
+# or
+yarn
+# or
+pnpm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
@@ -10,27 +48,42 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Customization
 
-## Learn More
+All editable content (features, pricing, FAQs, etc.) can be found in:
 
-To learn more about Next.js, take a look at the following resources:
+* `/data` folder
+* or directly inside `components/` and `app/`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Customize colors, text, logos, and sections easily to match your brand.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📦 1 Click Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/gridpixels/vesper)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gridpixels/vesper)
+
+Or deploy to your preferred hosting provider via export or CI/CD setup.
+
+---
+
+## ⭐ Support the Project
+
+If you enjoy using this template, consider starring it on GitHub to support future development!
+
+---
+
+## 👋 Credits
+
+Designed and developed by [GridPixels](https://gridpixels.org)
+
+For support, questions, or custom work, reach out to **[hello@gridpixels.org](mailto:hello@gridpixels.org)**
+
